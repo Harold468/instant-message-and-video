@@ -86,7 +86,9 @@ ASGI_APPLICATION = 'ryla.asgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 AUTH_USER_MODEL='rylamain.USERS_AVAILABLE'
-if 'test' in sys.argv:
+# if 'test' in sys.argv:
+TESTING = sys.argv[1:2] == ['test']
+if TESTING==True:
     DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
