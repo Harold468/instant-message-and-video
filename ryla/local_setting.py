@@ -87,7 +87,7 @@ ASGI_APPLICATION = 'ryla.asgi.application'
 
 AUTH_USER_MODEL='rylamain.USERS_AVAILABLE'
 
-if 'test' in sys.argv:
+if 'test' in sys.argv or 'pytest' in sys.argv:
     DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
