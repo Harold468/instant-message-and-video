@@ -23,7 +23,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: make an env
       run: |
-        cp .env.sample env
+        cp .env.sample .env
         
     - name: Install Dependencies
       run: |
